@@ -20,7 +20,7 @@ if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 }else{
     notificationElement.style.display = "block";
-    notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
+    notificationElement.innerHTML = "<p>Localização não disponivel!</p>";
 }
 
 function setPosition(position){
@@ -32,7 +32,7 @@ function setPosition(position){
 
 function showError(error){
     notificationElement.style.display = "block";
-    notificationElement.innerHTML = `<p> ${error.message} </p>`;
+    notificationElement.innerHTML = `<p> Localização não disponivel! </p>`;
 }
 
 function getWeather(latitude, longitude){
